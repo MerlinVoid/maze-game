@@ -14,8 +14,8 @@ bool GameEngine::movePlayer(char direction){
     if(won)
         return false;  //Prevents further movement if player has already reached exit
 
-    int r = p.getX();
-    int c = p.getY();
+    int r = p.getY();
+    int c = p.getX();
 
     switch(direction)
     {
@@ -37,8 +37,9 @@ bool GameEngine::movePlayer(char direction){
     
     if (!m.isWalkable(r,c))         //Checks whether the destination is inside the maze and is not a wall
         return false;
-
-    p.setPosition(r,c);             //Updates the player's coordinates
+    
+    //Updates the player's coordinates
+    p.move(c - p.getX(),r - p.getY());
 
     if (m.isExit(r,c))             //Checks whether player has reached exit after this move and updates won accordingly
         won = true;
