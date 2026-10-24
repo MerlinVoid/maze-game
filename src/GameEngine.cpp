@@ -1,6 +1,4 @@
 #include"GameEngine.h"
-#include<iostream>
-using namespace std;
 
 GameEngine::GameEngine(int rows,int cols, int startRow, int startCol,bool w): m(rows,cols), p(startRow,startCol)
 {   //Maze and Player objects are constructed before the GameEngine constructor body executes
@@ -37,15 +35,15 @@ bool GameEngine::movePlayer(char direction){
         return false;  //Invalid Input
     }   
     
-    if (!m.isWalkable(r,c))   //Checks whether the current coordinates is within the maze and is not a wall or obstacle
+    if (!m.isWalkable(r,c))         //Checks whether the destination is inside the maze and is not a wall
         return false;
 
     p.setPosition(r,c);             //Updates the player's coordinates
 
-    if (m.isExit(newRow, newCol))   //Checks whether player has reached exit after this move and updates won accordingly
+    if (m.isExit(r,c))             //Checks whether player has reached exit after this move and updates won accordingly
         won = true;
 
-    return true;    //return true if move is valid and player's position is updated
+    return true;                  //return true if move is valid and player's position is updated
 
 }
 

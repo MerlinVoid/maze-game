@@ -16,7 +16,7 @@ class GameEngine
         ~GameEngine() = default;            //default Destructor provided by compiler(no function definition required)
 
         bool movePlayer(char direction);    //Checks if a move is valid and updates the player position accordingly
-        bool hasWon() const;                //Checks whether player has reached exit
+        bool hasWon() const;                //Checks whether player has reached exit, cannot modify the object which calls it
 
         //Both the below functions cannot modify the object which calls them, due to the trailing const keyword
         const Maze& getMaze() const;        //Allows test driver to access maze for displaying, read only access
