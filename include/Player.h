@@ -1,3 +1,5 @@
+#ifndef PLAYER_H
+#define PLAYER_H
 #include<iostream>
 #include<string>
 
@@ -25,4 +27,4 @@ class Player{
         int getHealth() const;
         int getMovesCount() const;
 };
-
+#endif
