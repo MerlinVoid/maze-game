@@ -1,7 +1,7 @@
 #include"GameEngine.h"
 #include<cstdlib> //For rand() function, generates pseudorandom integer
 
-GameEngine::GameEngine(int rows,int cols, int startRow, int startCol,bool w): m(rows,cols,rand()), p(startRow,startCol)
+GameEngine::GameEngine(int rows,int cols, int startRow, int startCol,bool w): m(rows,cols,rand()), p(startRow,startCol,10)
 {   //Maze and Player objects are constructed before the GameEngine constructor body executes
     //Member initialiser(:) is used to construct Maze and Player objects, by calling their constructors
 
@@ -15,8 +15,8 @@ bool GameEngine::movePlayer(char direction){
     if(won)
         return false;  //Prevents further movement if player has already reached exit
 
-    int r = p.getRow();
-    int c = p.getCol();
+    int r = p.getX();
+    int c = p.getY();
 
     switch(direction)
     {
