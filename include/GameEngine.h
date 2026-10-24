@@ -10,7 +10,7 @@ class GameEngine
         bool won;              //Tells whether player reached exit successfully or not
     
     public:
-        GameEngine(int rows = 5,int cols = 5, int startRow = 1, int startCol = 1,bool w = false);   
+        GameEngine(int rows = 10,int cols = 10,int seed = 42, int startRow = 1, int startCol = 1, int health = 10, bool w = false);   
         //Parameterised Constructor defaulting its arguments
 
         ~GameEngine() = default;            //default Destructor provided by compiler(no function definition required)
