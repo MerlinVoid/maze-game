@@ -1,7 +1,6 @@
 #include"GameEngine.h"
-#include<cstdlib> //For rand() function, generates pseudorandom integer
 
-GameEngine::GameEngine(int rows,int cols, int startRow, int startCol,bool w): m(rows,cols,rand()), p(startRow,startCol,10)
+GameEngine::GameEngine(int rows, int cols, int seed, int startRow, int startCol, int health, bool w): m(rows,cols,seed), p(startRow,startCol,health)
 {   //Maze and Player objects are constructed before the GameEngine constructor body executes
     //Member initialiser(:) is used to construct Maze and Player objects, by calling their constructors
 
