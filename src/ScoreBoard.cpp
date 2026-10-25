@@ -4,6 +4,7 @@ ScoreBoard::ScoreBoard(std::string name, int initialScore, int initialHealth) {
     this->playerName = name;
     this->baseScore = initialScore;
     this->currentScore = initialScore;
+    this->penaltyPoints = 0;
     this->movesTracked = 0;
     this->healthTracked = initialHealth;
 }
