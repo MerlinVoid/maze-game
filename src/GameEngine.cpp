@@ -52,7 +52,7 @@ bool GameEngine::hasWon() const{
     return won;     
 }
 
-const Maze& GameEngine::getMaze() const{
+const maze& GameEngine::getMaze() const{
     return m;
 }
 
