@@ -1,11 +1,11 @@
 #ifndef GAME_ENGINE
 #define GAME_ENGINE
-#include"Maze.h"
+#include"mazeGeneration_Declaration.h"
 #include"Player.h"
 
 class GameEngine
 {   private:
-        Maze m;                //Stores Maze object constructed from Maze class(Class Composition)
+        maze m;                //Stores Maze object constructed from Maze class(Class Composition)
         Player p;              //Stores Player object constructed from Player class(Class Composition)
         bool won;              //Tells whether player reached exit successfully or not
     
