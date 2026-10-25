@@ -57,7 +57,7 @@ vector<cell> maze:: floodFillAlgo(cell initialStart, int** mazeGrid){
     //Initializing all visited to false.
     for(int x=0; x< mapHeight; x++){
         for(int y=0; y< mapWidth; y++){
-            visitedCell=false;
+            visitedCell[x][y]=false;
         }
     }
 
