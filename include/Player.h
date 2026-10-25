@@ -5,26 +5,26 @@
 
 using namespace std;
 
-struct Position{
+struct Position{  //A structure for storing player as coordinate
     int x;
     int y;
 };
 
 class Player{
     private:
-        Position pos;
-        int health;
-        int movesCount;
+        Position pos;  
+        int health;  //private data member for maintaing health of player
+        int movesCount;  //for counting the number of moves of the player
 
     public:
-        Player(int x,int y,int health);
-        void setPosition(int x,int y);
-        void reduceHealth(int health);
-        void move(int deltaX,int deltaY);
+        Player(int x,int y,int health);  //Parametrized constructor
+        void setPosition(int x,int y); 
+        void reduceHealth(int health);  //member function for reducing the health of player when it performs a wrong move
+        void move(int deltaX,int deltaY);  //member fuction for changing the coordinates of player 
 
-        int getX() const;
-        int getY() const;
-        int getHealth() const;
-        int getMovesCount() const;
+        int getX() const; //return the current row of player by value
+        int getY() const; //return the current column of player by value
+        int getHealth() const; //return the current health of player 
+        int getMovesCount() const;  //return the current value of number of moves of player
 };
 #endif
