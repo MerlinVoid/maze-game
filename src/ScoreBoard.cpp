@@ -13,7 +13,7 @@ void ScoreBoard::syncWithPlayer(const Player& p) {
     this->movesTracked = p.getMovesCount();
     this->healthTracked = p.getHealth();
     // Each move costs 10 points; minimum score is 0
-    int calculated = this->baseScore - (this->movesTracked * 10);
+    int calculated = this->baseScore - (this->movesTracked * 10) - (this->penaltyPoints);
     this->currentScore = (calculated > 0) ? calculated : 0;
 }
 
@@ -37,10 +37,16 @@ ScoreBoard& ScoreBoard::operator++() {
 // Binary - overload: returns a new ScoreBoard with penalty deducted
 ScoreBoard ScoreBoard::operator-(int penalty) const {
     ScoreBoard temp = *this;
-    temp.currentScore -= penalty;
-    if (temp.currentScore < 0) {
-        temp.currentScore = 0;
-    }
+
+    if (penalty <= 0)
+        return temp;
+
+    temp.penaltyPoints += penalty;
+
+    int calculated = temp.baseScore - (temp.movesTracked * 10) - temp.penaltyPoints;
+
+    temp.currentScore = (calculated > 0) ? calculated : 0;
+
     return temp;
 }
 
