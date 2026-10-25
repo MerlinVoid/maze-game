@@ -1,6 +1,6 @@
 #include"GameEngine.h"
 
-GameEngine::GameEngine(int rows, int cols, int seed, int startRow, int startCol, int health, bool w): m(rows,cols,seed), p(startRow,startCol,health)
+GameEngine::GameEngine(int rows, int cols, int seed, int startRow, int startCol, int health, bool w): m(rows,cols,seed), p(startCol,startRow,health)
 {   //Maze and Player objects are constructed before the GameEngine constructor body executes
     //Member initialiser(:) is used to construct Maze and Player objects, by calling their constructors
 
