@@ -38,9 +38,9 @@ std::ostream& operator<<(std::ostream& os, const GameEngine& engine) {
     int playerRow = player.getY();
     int playerCol = player.getX();
 
-    // Default grid dimensions matching GameEngine defaults (9x9)
-    int rows = 9;
-    int cols = 9;
+    // Retrieve the actual maze dimensions for rendering
+    int rows = maze.getRows();
+    int cols = maze.getCols();
 
     os << "\n";
     for (int r = 0; r < rows; ++r) {
