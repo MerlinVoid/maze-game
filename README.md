@@ -3,13 +3,13 @@
 Welcome to our mid-semester C++ Object-Oriented Programming project. This is a single-player terminal-based maze game designed to demonstrate core OOP principles.
 
 ## 🎮 Gameplay
-Navigate your character (\`P\`) through the dynamically generated grid to reach the Exit (\`E\`) while avoiding walls (\`#\`). 
+Navigate your character (`P`) through the dynamically generated grid to reach the Exit (`E`) while avoiding walls (`#`). 
 
 **Controls:** 
-- \`W\` : Move Up
-- \`A\` : Move Left
-- \`S\` : Move Down
-- \`D\` : Move Right
+- `W` : Move Up
+- `A` : Move Left
+- `S` : Move Down
+- `D` : Move Right
 
 ## 🏗️ Project Structure
 To prevent merge conflicts, the codebase is split:
@@ -27,10 +27,10 @@ To prevent merge conflicts, the codebase is split:
 ## 🚀 How to Compile and Run
 Compile the game from the root directory of the repository:
 
-\`\`\`bash
+```bash
 g++ src/*.cpp -Iinclude -o mazegame
-\`\`\`
+```
 
 Run the executable:
-- **Linux/Mac:** \`./mazegame\`
-- **Windows:** \`mazegame.exe\`
+- **Linux/Mac:** `./mazegame`
+- **Windows:** `mazegame.exe`
