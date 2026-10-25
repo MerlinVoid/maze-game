@@ -9,7 +9,7 @@ using namespace std;
 
 maze:: maze(int height, int width, int seed){ //UserDefined constructor.
     //Checking if map's valid.
-    if(height >= 3 && width >= 4){
+    if(height >= 3 && width >= 4){      //Minimum dimensions required for maze generation
         mapHeight= height;
         mapWidth = width;
         mazeGrid = new int*[mapHeight]; //i.e. stores each rows, i.e. each element of mapHeight.
