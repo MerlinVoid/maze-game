@@ -1,3 +1,5 @@
+#pragma once
+#include <vector>
 using namespace std;
 struct cell { //to store the position of cell.
     int x, y;
