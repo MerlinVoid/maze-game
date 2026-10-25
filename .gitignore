@@ -3,3 +3,8 @@ x64/
 Debug/
 Release/
 *.exe
+# Compiled binaries and object files
+build/
+*.o
+mazegame
+mazegame.exe
