@@ -8,8 +8,8 @@
 using namespace std;
 
 maze:: maze(int height, int width, int seed){ //UserDefined constructor.
-    //Checking if maps valid.
-    if(height>1 && width>1){
+    //Checking if map's valid.
+    if(height >= 3 && width >= 4){
         mapHeight= height;
         mapWidth = width;
         mazeGrid = new int*[mapHeight]; //i.e. stores each rows, i.e. each element of mapHeight.
@@ -24,7 +24,7 @@ maze:: maze(int height, int width, int seed){ //UserDefined constructor.
             }
         }
     }else{
-        cout<<"Invalid height or Width input! Size must be greater than 1."<< endl;
+        cout<<"Invalid maze dimensions! Minimum size is 3 rows and 4 columns."<< endl;
         abort();
     }
 
