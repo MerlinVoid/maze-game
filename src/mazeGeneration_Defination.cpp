@@ -174,6 +174,9 @@ void maze:: mazeGenerate(){
             else if (gridValue == 0) mazeGrid[x][y] = 1;
         }
     }
+    
+    //Ensure the player's default starting position (1,1) is walkable
+    mazeGrid[1][1] = 0;
 
     //Now using flood-fill algorithm to create region and interconnect them so there exist atleast one path for each walkable tile from start.
     //Creating an region array to store region of each cell.
