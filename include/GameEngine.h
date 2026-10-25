@@ -19,7 +19,7 @@ class GameEngine
         bool hasWon() const;                //Checks whether player has reached exit, cannot modify the object which calls it
 
         //Both the below functions cannot modify the object which calls them, due to the trailing const keyword
-        const Maze& getMaze() const;        //Allows test driver to access maze for displaying, read only access
+        const maze& getMaze() const;        //Allows test driver to access maze for displaying, read only access
         const Player& getPlayer() const;    //Allows test driver to access player's position, read only access(as const return type)
 };
 
