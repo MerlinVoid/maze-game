@@ -31,7 +31,7 @@ void UI::renderControls() const {
 
 // Overloaded << operator to render the current state of GameEngine
 std::ostream& operator<<(std::ostream& os, const GameEngine& engine) {
-    const Maze& maze = engine.getMaze();
+    const maze& maze = engine.getMaze();
     const Player& player = engine.getPlayer();
 
     // Note: In GameEngine.cpp, r = p.getY() and c = p.getX()
