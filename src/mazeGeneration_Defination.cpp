@@ -109,6 +109,16 @@ vector<cell> maze:: floodFillAlgo(cell initialStart, int** mazeGrid){
     return tileList; //returning the list.
 }
 
+int maze::getRows() const {
+    // Returns the number of rows in the maze
+    return mapHeight;
+}
+
+int maze::getCols() const {
+    // Returns the number of columns in the maze
+    return mapWidth;
+}
+
 void maze:: mazeGenerate(){
     //First Generating the boundary. (i.e. assiging border as 1).
     for (int y=0; y< mapWidth; y++) {
